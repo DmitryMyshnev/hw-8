@@ -1,11 +1,9 @@
-import jdk.internal.util.ArraysSupport;
+
 
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Objects;
 
 public class MyArrayList<E> {
-    private static final Object[]  EMPTY_DATA = {};
+    private static final Object[] EMPTY_DATA = {};
     private Object[] data;
     private int size = 0;
 
@@ -13,58 +11,61 @@ public class MyArrayList<E> {
         this.data = EMPTY_DATA;
     }
 
-    public void add(E e){
-        add(e,data.length);
+    public void add(E e) {
+        add(e, data.length);
     }
-    private void add(E e, int n){
-        if(n == 0){
-            data = Arrays.copyOf(data,n+1);
+
+    private void add(E e, int n) {
+        if (n == 0) {
+            data = Arrays.copyOf(data, n + 1);
             data[n] = e;
-            size ++;
-        }else {
-            data = Arrays.copyOf(data,data.length + 1);
+            size++;
+        } else {
+            data = Arrays.copyOf(data, data.length + 1);
             data[n] = e;
-            size ++;
+            size++;
         }
     }
-    public void remove (int index){
-        if(index < 0 || index >= data.length)
+
+    public void remove(int index) {
+        if (index < 0 || index >= data.length)
             throw new IndexOutOfBoundsException();
-        if(data.length == 0)
-            return;
         final Object[] rm = data;
-        removeOfIndex(rm,index);
+        removeOfIndex(rm, index);
     }
 
     private void removeOfIndex(Object[] es, int index) {
-        if(index < data.length - 1){
-        for (int i = index; i < es.length-1; i++) {
-            es[i] = es[i + 1];
-        }
-        es = Arrays.copyOf(es, es.length - 1);
-        size--;
-        }
-        else {
+        if (index < data.length - 1) {
+            for (int i = index; i < es.length - 1; i++) {
+                es[i] = es[i + 1];
+            }
+            es = Arrays.copyOf(es, es.length - 1);
+            size--;
+        } else {
             es = Arrays.copyOf(es, es.length - 1);
             size--;
         }
     }
+
     public E get(int index) {
-        if(index < 0 || index > data.length)
+        if (index < 0 || index > data.length)
             throw new IndexOutOfBoundsException();
-        if(data.length == 0)
+        if (data.length == 0)
             return null;
         return dataOfIndex(index);
     }
+
     E dataOfIndex(int index) {
         return (E) data[index];
     }
-    public int getSize(){
+
+    public int getSize() {
         return size;
     }
-    public void clear(){
-        data = Arrays.copyOf(data,0);
-        size =data.length;
+
+    public void clear() {
+        data = Arrays.copyOf(data, 0);
+        size = data.length;
     }
 
 }
