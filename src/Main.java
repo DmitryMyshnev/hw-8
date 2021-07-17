@@ -8,10 +8,9 @@ public class Main {
         myArrayList.add(3);
         myArrayList.add(4);
         myArrayList.add(5);
-        myArrayList.clear();
-      // myArrayList.remove(4);
-       // myArrayList.remove(1);
 
+        myArrayList.remove(4);
+        myArrayList.clear();
         for (int i = 0; i < myArrayList.getSize() ; i++) {
             System.out.println(myArrayList.get(i));
         }

@@ -16,7 +16,7 @@ public class MyArrayList<E> {
     }
 
     private void add(E e, int n) {
-        if (n == 0) {
+        if(n == 0) {
             data = Arrays.copyOf(data, n + 1);
             data[n] = e;
             size++;
@@ -55,7 +55,7 @@ public class MyArrayList<E> {
         return dataOfIndex(index);
     }
 
-    E dataOfIndex(int index) {
+   private E dataOfIndex(int index) {
         return (E) data[index];
     }
 
