@@ -13,10 +13,12 @@ public class MyQueue<E> {
             final Node<E> l = last;
             final Node<E> newNode = new Node<>(l,e,null);
             last = newNode;
-            if (l == null)
+            if (l == null) {
                 first = newNode;
-            else
+            }
+            else {
                 l.nextLink = newNode;
+            }
             size++;
         }
         private Node<E> getElement(int index){
@@ -34,18 +36,21 @@ public class MyQueue<E> {
             }
         }
         public  E get(int index){
-            if(size == 0)
+            if(size == 0) {
                 return null;
-            if(index < 0 || index >= size)
+            }
+            if(index < 0 || index >= size) {
                 throw new IndexOutOfBoundsException();
-
+            }
             return getElement(index).element;
         }
         public E remove(int index) {
-            if(size == 0)
+            if(size == 0) {
                 return null;
-            if(index < 0 || index >= size)
+            }
+            if(index < 0 || index >= size) {
                 throw new IndexOutOfBoundsException();
+            }
             return removeElement(getElement(index));
         }
         private E removeElement(Node<E> el){

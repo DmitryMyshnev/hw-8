@@ -28,8 +28,9 @@ public class MyArrayList<E> {
     }
 
     public void remove(int index) {
-        if (index < 0 || index >= data.length)
+        if (index < 0 || index >= data.length) {
             throw new IndexOutOfBoundsException();
+        }
         final Object[] rm = data;
         removeOfIndex(rm, index);
     }
@@ -49,10 +50,12 @@ public class MyArrayList<E> {
 
 
     public E get(int index) {
-        if (index < 0 || index > data.length)
+        if (index < 0 || index > data.length) {
             throw new IndexOutOfBoundsException();
-        if (data.length == 0)
+        }
+        if (data.length == 0) {
             return null;
+        }
         return dataOfIndex(index);
     }
 
@@ -66,7 +69,7 @@ public class MyArrayList<E> {
 
     public void clear() {
         data = Arrays.copyOf(data, 0);
-        size = data.length;
+        size = 0;
     }
 
 }

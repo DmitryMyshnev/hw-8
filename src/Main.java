@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        MyArrayList<Integer> myArrayList = new MyArrayList<>();
+      /*  MyArrayList<Integer> myArrayList = new MyArrayList<>();
         myArrayList.add(0);
         myArrayList.add(1);
         myArrayList.add(2);
@@ -50,6 +50,15 @@ public class Main {
             System.out.println(queue.get(i));
         }
         String peek =   queue.peek();
-        System.out.println(peek);
+        System.out.println(peek);*/
+        MyStack<String> stack = new MyStack<>();
+        for (int i = 0; i < 5; i++) {
+            stack.push(Integer.toString(i));
+        }
+        System.out.println(stack.size());
+        stack.remove(0);
+        System.out.println(stack.size());
+
+
     }
 }
