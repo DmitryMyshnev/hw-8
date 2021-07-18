@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,5 +39,17 @@ public class Main {
         System.out.println();
         myLinkedList.clear();
         System.out.println("Size is " + myLinkedList.size());
+        System.out.println("--------------------------");
+
+        MyQueue<String> queue = new MyQueue<>();
+        queue.add("1");
+        queue.add("2");
+        queue.add("3");
+        queue.add("4");
+        for (int i = 0; i < queue.size(); i++) {
+            System.out.println(queue.get(i));
+        }
+        String peek =   queue.peek();
+        System.out.println(peek);
     }
 }
