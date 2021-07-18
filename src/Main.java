@@ -38,6 +38,5 @@ public class Main {
         System.out.println();
         myLinkedList.clear();
         System.out.println("Size is " + myLinkedList.size());
-
     }
 }

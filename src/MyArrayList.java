@@ -47,6 +47,7 @@ public class MyArrayList<E> {
         }
     }
 
+
     public E get(int index) {
         if (index < 0 || index > data.length)
             throw new IndexOutOfBoundsException();

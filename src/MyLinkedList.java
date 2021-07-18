@@ -87,6 +87,7 @@ public  E get(int index){
         first = last = null;
         size = 0;
     }
+
    private static class Node<E>{
     E element;
     Node<E> nextLink;
