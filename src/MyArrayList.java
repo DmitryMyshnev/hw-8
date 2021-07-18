@@ -59,7 +59,7 @@ public class MyArrayList<E> {
         return (E) data[index];
     }
 
-    public int getSize() {
+    public int size() {
         return size;
     }
 
