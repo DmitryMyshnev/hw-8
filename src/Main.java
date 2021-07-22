@@ -55,9 +55,11 @@ public class Main {
         for (int i = 0; i < 5; i++) {
             stack.push(Integer.toString(i));
         }
-        System.out.println(stack.size());
+       // System.out.println(stack.size());
         stack.remove(0);
-        System.out.println(stack.size());
+        //System.out.println(stack.size());
+       HashMap< Integer,String> map = new HashMap<>();
+       map.put(3,"data");
 
 
     }
