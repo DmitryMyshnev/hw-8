@@ -30,11 +30,8 @@ public class MyHashMap<K, V> {
 
     private Node<K, V>[] table;
     private int size;
-    private int threshold;
-    private float loadFactor;
 
     public MyHashMap() {
-        this.loadFactor = LOAD_FACTOR;
     }
 
     public int hash(Object key) {
